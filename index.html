@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio — Design Engineering</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grid-overlay" aria-hidden="true"></div>
+
+<header class="site-header">
+  <span class="logo">THEODORE BISCHOFF</span>
+  <nav>
+    <a href="#work">Work</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+
+  <section class="hero">
+    <p class="eyebrow">// design engineering</p>
+    <h1>Building practical solutions in<br><span class="accent">health</span>, <span class="accent">sustainability</span><br>&amp; everyday consumer life.</h1>
+    <p class="hero-sub">2nd year Design Engineering student at Imperial College London. This is a working record of what I'm building.</p>
+  </section>
+
+  <section id="work" class="work">
+    <p class="eyebrow">// projects</p>
+    <div class="project-list" id="project-list">
+      <!-- Project cards injected here by script.js -->
+    </div>
+  </section>
+
+  <section id="About" class="about">
+    <p class="eyebrow">// about</p>
+    <p class="about-text">
+      I'm a 2nd year undergraduate Design Engineering student at Imperial College London,
+      interested in building practical solutions to problems in health, sustainability,
+      and everyday consumer life. In my first year I worked on two projects as part of a
+      team and a pair respectively — a fridge pad and companion app to reduce food spoilage
+      in university accommodation kitchens, and a safe secured by multiple electrical sensor
+      and input-based unlock methods, built around an ESP32.
+    </p>
+  </section>
+
+  <section id="Contact" class="contact">
+    <p class="eyebrow">// contact</p>
+    <a href="theodorebb5@gmail.com" class="contact-link">theodorebb5@gmail.com</a>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/theodore-bischoff/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/TheodoreB45" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <span>&copy; 2026</span>
+</footer>
+
+<script src="projects.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
