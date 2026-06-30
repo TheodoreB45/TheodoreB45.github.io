@@ -1,41 +1,43 @@
 // PROJECTS DATA
-// To add a new project later: copy one of the objects below, edit the fields,
-// and add it to the array. The page will render it automatically —
-// no HTML or CSS editing needed.
+// To add a new project later:
+//   1. Copy one of the objects below and edit the fields.
+//   2. Add it to the PROJECTS array.
+//   3. Copy projects/template.html to projects/your-slug.html and edit
+//      the text inside (see comments in that file).
+// The homepage cards render automatically from this file — no HTML/CSS
+// editing needed there.
 //
 // Fields:
+//   slug         - short id used in the URL, e.g. "fridge-pad"
+//                  -> page will be at projects/fridge-pad.html
 //   title        - project name
 //   year         - e.g. "2025–26"
 //   team         - e.g. "Team of 4" or "Pair"
 //   role         - your specific role/contribution
 //   tools        - array of tools/skills used, shown as tags
-//   tagline      - one-line summary (shown on the card before expanding)
-//   description  - 2-4 sentences of detail
-//   image        - path to an image, e.g. "images/fridge-pad.jpg"
+//   tagline      - one-line summary (shown on the card)
+//   image        - path to the card's main image, e.g. "images/fridge-pad.jpg"
 //                  (leave as "" to show a placeholder)
-//   link         - optional external link (e.g. GitHub, video demo)
 
 const PROJECTS = [
   {
+    slug: "fridge-pad",
     title: "Fridge Pad",
     year: "2025–26",
     team: "Team of 4",
     role: "Hardware & app integration",
     tools: ["Sensors", "App Design", "Prototyping", "User Research"],
     tagline: "A smart pad and companion app that helps reduce food spoilage in shared kitchens.",
-    description: "Designed and built a sensor-equipped fridge pad paired with a companion app, aimed at reducing food spoilage in university accommodation kitchens. The system tracks food and nudges users on what needs using up, addressing a problem common to shared student kitchens.",
-    image: "",
-    link: ""
+    image: "images/fridge-space.png"
   },
   {
+    slug: "esp32-safe",
     title: "ESP32 Sensor Safe",
     year: "2025–26",
     team: "Pair",
     role: "Electronics & firmware",
     tools: ["ESP32", "Electronics", "Embedded C++", "Sensor Integration"],
     tagline: "A safe secured by multiple electrical sensor and input-based unlock methods.",
-    description: "Built a physical safe secured by several distinct unlock methods, each driven by different electrical sensors and inputs, all coordinated through an ESP32 microcontroller. The project explored combining multiple authentication methods within a single embedded system.",
-    image: "",
-    link: ""
+    image: "images/smart-safe.jpg"
   }
 ];

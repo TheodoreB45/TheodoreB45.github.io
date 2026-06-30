@@ -1,13 +1,16 @@
 // Renders project cards from the PROJECTS array in projects.js.
-// To add a project: edit projects.js only. This file doesn't need to change.
+// Each card links to its dedicated page at projects/<slug>.html.
+// To add a project: edit projects.js and add a matching HTML page.
+// This file doesn't need to change.
 
 function renderProjects() {
   const list = document.getElementById('project-list');
   if (!list || typeof PROJECTS === 'undefined') return;
 
-  PROJECTS.forEach((project, index) => {
-    const card = document.createElement('article');
+  PROJECTS.forEach((project) => {
+    const card = document.createElement('a');
     card.className = 'project-card';
+    card.href = `projects/${encodeURIComponent(project.slug)}.html`;
 
     const visualContent = project.image
       ? `<img src="${escapeHtml(project.image)}" alt="${escapeHtml(project.title)}">`
@@ -16,12 +19,6 @@ function renderProjects() {
     const tags = (project.tools || [])
       .map(tool => `<span>${escapeHtml(tool)}</span>`)
       .join('');
-
-    const detailId = `detail-${index}`;
-
-    const linkHtml = project.link
-      ? `<a class="card-detail-link" href="${escapeHtml(project.link)}" target="_blank" rel="noopener">View more &rarr;</a>`
-      : '';
 
     card.innerHTML = `
       <div class="card-header">
@@ -35,30 +32,12 @@ function renderProjects() {
           <h3>${escapeHtml(project.title)}</h3>
           <p class="card-tagline">${escapeHtml(project.tagline || '')}</p>
           <div class="card-tags">${tags}</div>
-          <button class="card-toggle" aria-expanded="false" aria-controls="${detailId}">
-            Read more
-          </button>
-        </div>
-      </div>
-      <div class="card-detail" id="${detailId}">
-        <div class="card-detail-inner">
-          <p>${escapeHtml(project.description || '')}</p>
-          ${linkHtml}
+          <span class="card-view-link">View project &rarr;</span>
         </div>
       </div>
     `;
 
     list.appendChild(card);
-  });
-
-  // Wire up toggle buttons after all cards are in the DOM
-  document.querySelectorAll('.card-toggle').forEach(button => {
-    button.addEventListener('click', () => {
-      const detail = document.getElementById(button.getAttribute('aria-controls'));
-      const isOpen = detail.classList.toggle('open');
-      button.setAttribute('aria-expanded', String(isOpen));
-      button.textContent = isOpen ? 'Show less' : 'Read more';
-    });
   });
 }
 
