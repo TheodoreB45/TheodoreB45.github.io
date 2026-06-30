@@ -21,8 +21,8 @@
 
 const PROJECTS = [
   {
-    slug: "fridge-pad",
-    title: "Fridge Pad",
+    slug: "fridge-space",
+    title: "FridgeSpace",
     year: "2025–26",
     team: "Team of 4",
     role: "Hardware & app integration",
@@ -31,8 +31,8 @@ const PROJECTS = [
     image: "images/fridge-space.png"
   },
   {
-    slug: "esp32-safe",
-    title: "ESP32 Sensor Safe",
+    slug: "smart-safe",
+    title: "Smart Safe",
     year: "2025–26",
     team: "Pair",
     role: "Electronics & firmware",
