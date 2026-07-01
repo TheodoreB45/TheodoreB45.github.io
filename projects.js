@@ -38,6 +38,6 @@ const PROJECTS = [
     role: "Electronics & firmware",
     tools: ["ESP32", "Electronics", "Embedded Micropython", "Sensor Integration"],
     tagline: "A safe secured by multiple electrical sensor and input-based unlock methods.",
-    image: "images/smart-safe.jpg"
+    image: "images/safe.jpg"
   }
 ];

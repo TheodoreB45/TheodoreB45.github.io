@@ -184,7 +184,7 @@ header, main, footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 250px;
+  height: 320px;
   border-right: 1px solid var(--line);
 }
 
@@ -417,7 +417,7 @@ header, main, footer {
   );
   background-color: #e4e7ea;
   border: 1px solid var(--line);
-  height: 360px;
+  height: 320px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -429,6 +429,7 @@ header, main, footer {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 30%;
   display: block;
 }
 
@@ -465,8 +466,131 @@ header, main, footer {
   gap: 1rem;
 }
 
+.project-card:nth-child(2) .card-visual img {
+  object-position: center 60%;
+}
+
 @media (max-width: 640px) {
   .project-gallery {
     grid-template-columns: 1fr;
+  }
+}
+
+/* ============================= */
+/* Smart Safe project page       */
+/* ============================= */
+
+.inline-image {
+  width: 280px;
+  height: 250px;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  flex-shrink: 0;
+}
+
+.prose-block {
+  display: flex;
+  gap: 1.75rem;
+  align-items: flex-start;
+  margin-bottom: 1.3rem;
+}
+
+.prose-block.image-right { flex-direction: row; }
+.prose-block.image-left  { flex-direction: row-reverse; }
+.prose-block p { margin: 0; }
+
+/* Cinema bar video section */
+.cinema-section {
+max-width: var(--max-w);
+margin: 0 auto 0;
+background: #15202b;
+padding: 3rem 1.5rem;
+}
+
+.cinema-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.cinema-video {
+  display: block;
+  height: 320px;
+  width: auto;
+  flex-shrink: 0;
+  background: #000;
+}
+
+.cinema-annotation {
+  flex: 1;
+}
+
+.cinema-annotation .eyebrow {
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+}
+
+.cinema-annotation h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #eef0f2;
+  margin: 0 0 0.75rem 0;
+}
+
+.cinema-annotation p {
+  font-size: 0.92rem;
+  color: #7a8d9a;
+  line-height: 1.7;
+  margin: 0 0 1.25rem 0;
+  max-width: 36ch;
+}
+
+.cinema-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.cinema-tags span {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  color: var(--accent);
+  background: rgba(181, 101, 29, 0.15);
+  border: 1px solid rgba(181, 101, 29, 0.4);
+  padding: 0.18rem 0.5rem;
+  border-radius: 2px;
+}
+
+.cinema-annotation ol {
+margin: 0 0 1rem 0;
+padding-left: 1.2rem;
+color: #7a8d9a;
+font-size: 0.92rem;
+line-height: 1.9;
+}
+
+.cinema-annotation p {
+margin: 0 0 0.5rem 0;
+}
+
+@media (max-width: 640px) {
+  .prose-block.image-right,
+  .prose-block.image-left {
+    flex-direction: column;
+  }
+  .inline-image {
+    width: 100%;
+    height: 200px;
+  }
+  .cinema-inner {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .cinema-video {
+    height: auto;
+    width: 100%;
   }
 }

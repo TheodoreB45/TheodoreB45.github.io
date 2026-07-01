@@ -23,44 +23,56 @@
     <h1>ESP32 Sensor Safe</h1>
     <div class="project-meta-row">
       <span>2025–26</span>
-      <span>Pair</span>
       <span>Electronics &amp; firmware</span>
     </div>
     <div class="project-tags">
       <span>ESP32</span>
-      <span>Electronics</span>
-      <span>Embedded C++</span>
       <span>Sensor Integration</span>
-    </div>
-  </section>
-
-  <section class="project-main-image">
-    <div class="image-frame">
-      <!-- Replace with: <img src="../images/esp32-safe-main.jpg" alt="ESP32 Sensor Safe"> -->
-      <img src="../images/safe.jpg" alt="Smart Safe">
+      <span>Embedded Micropython</span>
+      <span>Hardware Design</span>
     </div>
   </section>
 
   <section class="project-body">
-    <p>Working in a pair, I built a physical safe secured by several distinct unlock methods, each driven by a different electrical sensor or input, all coordinated through a single ESP32 microcontroller. Rather than relying on one form of authentication, the project explored what it would take to combine multiple, genuinely different unlock mechanisms within one embedded system.</p>
-    <p>My focus was on the electronics and firmware side: wiring up the sensors, writing the embedded C++ logic to read and validate each input method, and making sure the system behaved reliably when methods were combined or used out of order. It was a good introduction to the practical challenges of embedded systems — debugging at the hardware level, managing multiple input sources cleanly in code, and getting components to work together rather than in isolation.</p>
-    <p></p>
-  </section>
 
-  <section class="project-gallery">
-    <div class="gallery-item">
-      <div class="image-frame">
-        <img src="../images/smart-safe.jpg" alt="Smart Safe">
-      </div>
+    <div class="prose-block image-right">
+      <p>Working in a pair, I built a physical safe secured by several distinct unlock methods, each driven by a different electrical sensor or input, all coordinated through a single ESP32 microcontroller. Rather than relying on one form of authentication, the project explored what it would take to combine multiple, genuinely different unlock mechanisms within one embedded system.</p>
+      <img class="inline-image" src="../images/smart-safe.jpg" alt="Smart Safe exterior" style="object-position: center 65%;">
     </div>
-    <div class="gallery-item">
-      <div class="image-frame">
-        <img src="../images/safe-light.jpg" alt="Smart Safe">
-      </div>
+
+    <div class="prose-block image-left">
+      <p>My focus was on the hardware side: figuring out the layout of the electronic components within the safe, creating a CAD mockup of the design, laser cutting it, 3D printing complex assembly components, assembling it and debugging issues. It was a good introduction to the practical challenges of embedded systems — debugging at the hardware level, managing multiple input sources cleanly in code, and getting components to work together rather than in isolation.</p>
+      <img class="inline-image" src="../images/safe-light.jpg" alt="Smart Safe interior" style="object-position: center 60%;">
     </div>
+
   </section>
 
 </main>
+
+<section class="cinema-section">
+  <div class="cinema-inner">
+
+    <video class="cinema-video" controls>
+      <source src="../images/safe-demo.mp4" type="video/mp4">
+    </video>
+
+    <div class="cinema-annotation">
+      <p class="eyebrow">// demo</p>
+      <h3>Unlocking the safe</h3>
+      <p>Watch all sensor-based unlock methods demonstrated in sequence:</p>
+      <ol>
+        <li>Card IR Sensor</li>
+        <li>Capacitive touch Keypad</li>
+        <li>Rotary encoder</li>
+        <li>Web password</li>
+      </ol>
+      <div class="cinema-tags">
+        <span>1:42</span>
+      </div>
+    </div>
+
+  </div>
+</section>
 
 <footer class="site-footer" style="max-width: 880px; margin: 0 auto; padding: 1.5rem;">
   <span>&copy; 2026</span>
