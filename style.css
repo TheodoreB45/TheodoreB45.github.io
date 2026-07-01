@@ -168,7 +168,7 @@ header, main, footer {
 
 .card-header {
   display: grid;
-  grid-template-columns: 1.1fr 1fr;
+  grid-template-columns: 1fr 1.1fr;
   gap: 0;
 }
 
@@ -184,7 +184,7 @@ header, main, footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 220px;
+  height: 250px;
   border-right: 1px solid var(--line);
 }
 

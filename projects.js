@@ -36,7 +36,7 @@ const PROJECTS = [
     year: "2025–26",
     team: "Pair",
     role: "Electronics & firmware",
-    tools: ["ESP32", "Electronics", "Embedded C++", "Sensor Integration"],
+    tools: ["ESP32", "Electronics", "Embedded Micropython", "Sensor Integration"],
     tagline: "A safe secured by multiple electrical sensor and input-based unlock methods.",
     image: "images/smart-safe.jpg"
   }
